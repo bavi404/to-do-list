@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decorative gradient blobs -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+
+    <div class="container glass">
+        <header class="app-header">
+            <div class="title-row">
+                <h1>My To‑Do</h1>
+                <div class="header-actions">
+                    <select id="themeSelector" class="theme-selector" aria-label="Choose theme">
+                        <option value="dark">🌙 Dark</option>
+                        <option value="light">☀️ Light</option>
+                        <option value="pink">🌸 Pink</option>
+                        <option value="pink-light">🌺 Pink Light</option>
+                    </select>
+                </div>
+            </div>
+            <p class="subtitle">Capture. Complete. Celebrate.</p>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="mood-container">
+                    <div id="moodFace" class="mood-face" aria-label="Progress mood indicator">😊</div>
+                    <div class="mood-text">
+                        <span id="moodMessage">Ready to conquer tasks!</span>
+                        <div class="points-display">
+                            <span id="pointsDisplay">0</span> points
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressPercentage">0%</span> complete
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats" aria-live="polite">
+                <span><strong id="statTotal">0</strong> total</span>
+                <span><strong id="statCompleted">0</strong> done</span>
+                <span><strong id="statRemaining">0</strong> left</span>
+            </div>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Add a new task..." 
+                        maxlength="100"
+                        autocomplete="off"
+                    >
+                    <input 
+                        type="datetime-local" 
+                        id="deadlineInput" 
+                        class="deadline-input"
+                        title="Set deadline (optional)"
+                    >
+                    <button id="addTaskBtn" class="primary-btn" type="button">Add Task</button>
+                </div>
+                <div class="bulk-actions">
+                    <button id="clearCompletedBtn" class="ghost-btn" type="button">Clear Completed</button>
+                    <button id="clearAllBtn" class="ghost-btn danger" type="button">Clear All</button>
+                </div>
+            </section>
+            
+            <section class="tasks-section">
+                <ul id="taskList" class="task-list" aria-label="Task list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+            </section>
+        </main>
+        <footer class="app-footer">
+            <small>Made with focus • Your day, your flow</small>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
