@@ -50,8 +50,7 @@ A beautiful, interactive to-do list application with glassmorphism design, mood-
 
 ## 🎯 **Live Demo**
 
-[View Live Demo](https://bavi404.github.io/to-do-list/) *(Coming Soon)*
-
+https://to-do-list-kappa-black-95.vercel.app/
 ## 🚀 **Quick Start**
 
 1. **Clone the repository**
